@@ -1,4 +1,6 @@
-ACTIONS = ['shoot', 'laser', 'block', 'laserblock']
+import random
+
+ACTIONS = ['shoot', 'laser', 'block', 'laserblock', 'load']
 
 
 class Player:
@@ -6,4 +8,4 @@ class Player:
         self.name = name
 
     def act(self):
-        return ACTIONS[0]
+        random.choice(ACTIONS)
