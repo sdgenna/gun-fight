@@ -1,0 +1,29 @@
+import Player
+
+sylvain = Player.Player("Sylvain")
+tristan = Player.Player("Tristan")
+
+NAME = [sylvain,tristan]
+
+
+for i in range(0,3):
+
+    print(' --------------- Round '+ str(i) + ' -----------------')
+    latest_action = NAME[i%2].random_act()
+    action_id = NAME[i%2].read(latest_action )
+    NAME[i%2].memorize_player_action(action_id)
+    action_id = NAME[(i+1)%2].read(latest_action )
+    NAME[(i+1)%2].memorize_opponent_action(action_id)
+    print(NAME[i%2].name + " remembered " +  str(NAME[(i)%2].player_memory) + " as its own action")
+    print(NAME[i%2].name + " remembered " +  str(NAME[(i)%2].opponent_memory) + " as the opponent action")
+    print(NAME[(i+1)%2].name + " remembered " +  str(NAME[(i+1)%2].player_memory) + " as its own action")
+    print(NAME[(i+1)%2].name + " remembered " +  str(NAME[(i+1)%2].opponent_memory) + " as the opponent action")
+
+
+
+
+
+
+
+
+
