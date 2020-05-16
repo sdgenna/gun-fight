@@ -8,4 +8,4 @@ class Player:
         self.name = name
 
     def act(self):
-        random.choice(ACTIONS)
+        return random.choice(ACTIONS)
