@@ -7,5 +7,14 @@ class Player:
     def __init__(self, name):
         self.name = name
 
-    def act(self):
+    def random_act(self):
         random.choice(ACTIONS)
+        
+    def action(self,action_id):
+        switch(action_id):
+            
+            case 1: Do shoot
+            case 2: Do laser    
+                ....
+                
+                
